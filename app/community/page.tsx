@@ -12,7 +12,7 @@ import { ThumbsUp, Hash, Terminal } from "lucide-react"
 type Post = {
   id: number
   content: string
-  tripcode: string // 存 ID
+  author_name: string // 存 Tripcode ID
   likes: number
   created_at: string
 }
