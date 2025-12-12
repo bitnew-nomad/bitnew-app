@@ -107,23 +107,41 @@ ${formData.url ? `or visit our website: ${formData.url}` : ''}
                 value={policy} 
               />
               
-              <div className="bg-green-50 p-4 rounded-lg border border-green-200 mt-4 text-center">
-                <h3 className="font-bold text-green-800 text-lg mb-2">Want a Permanent URL?</h3>
-                <p className="text-green-700 text-sm mb-4">
-                  Don't want to host this yourself? Get a permanent link (e.g. 1dollar-launch.xyz/p/yourapp) to paste directly into App Store Connect.
+              <div className="bg-green-50 p-6 rounded-lg border border-green-200 mt-4 text-center">
+                <h3 className="font-bold text-green-800 text-lg mb-2">Get Your Permanent URL</h3>
+                <p className="text-green-700 text-sm mb-6">
+                  Choose your preferred payment method to unlock the hosting service.
                 </p>
                 
-                {/* 👇 你的 KO-FI 链接就在这里 👇 */}
-                <a 
-                  href="https://ko-fi.com/s/d0afdef925" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white font-bold">
-                    Get Hosted URL for $1
-                  </Button>
-                </a>
-                <p className="text-xs text-gray-500 mt-2">Secure payment via PayPal / Ko-fi</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  {/* 🌍 International Channel (Ko-fi) */}
+                  <a 
+                    href="https://ko-fi.com/s/d0afdef925" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="lg" className="w-full bg-slate-900 hover:bg-slate-800 text-white">
+                      Pay $1.00 (PayPal)
+                    </Button>
+                  </a>
+
+                  {/* 🇨🇳 Domestic Channel (面包多 - Replace with your mbd.pub link) */}
+                  <a 
+                    href="https://mbd.pub/o/your-mianbaoduo-link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white">
+                      Pay ¥7.00 (WeChat/Alipay)
+                    </Button>
+                  </a>
+                </div>
+
+                <p className="text-xs text-gray-500 mt-4">
+                  Both methods grant immediate access to the generator.
+                </p>
               </div>
 
               <Button variant="ghost" className="w-full" onClick={() => setStep(1)}>
